@@ -6,6 +6,10 @@ const shortCode = require("../middlewares/uniqueUrlCode");
 
 module.exports = app => {
 
+  app.get('/', function (req, res) {
+    res.send("This is working, isn't it Eric?");
+  });
+
   app.get("/api/item/:code", async (req, res) => {
     const urlCode = req.params.code;
     const item = await UrlShorten.findOne({ urlCode: urlCode });
