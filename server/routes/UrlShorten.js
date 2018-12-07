@@ -7,7 +7,7 @@ const shortCode = require("../middlewares/uniqueUrlCode");
 module.exports = app => {
 
   app.get('/', function (req, res) {
-    res.send("This is working, isn't it Eric?");
+    res.send("This is working, now check if /api/item also works here");
   });
 
   app.get("/api/item/:code", async (req, res) => {

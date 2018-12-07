@@ -1,3 +1,4 @@
 module.exports = {
-  mongoURI: "mongodb://localhost/url-shortner",
+  mongoURI: "mongodb://host1/localhost/semaProjDatabase",
+  errorUrl: "https://ericf.com/error"
 };
