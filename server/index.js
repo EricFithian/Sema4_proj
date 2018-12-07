@@ -1,5 +1,10 @@
 const express = require("express");
+const mongoURI = "mongodb://localhost/semaProjDatabase";
 const mongoose = require("mongoose");
+const connectOptions = {
+  keepAlive: true,
+  reconnectTries: Number.MAX_VALUE
+};
 const bodyParser = require("body-parser");
 const constants = require("./config/constants");
 
