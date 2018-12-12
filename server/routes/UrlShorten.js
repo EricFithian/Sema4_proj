@@ -3,12 +3,13 @@ const validUrl = require("valid-url");
 const UrlShorten = mongoose.model("UrlShorten");
 const constants = require("../config/constants");
 const shortCode = require("../middlewares/uniqueUrlCode");
+const path = require("path");
 
 module.exports = app => {
 
   // This was just to test if the server is running properly. Next I'll test if the APIs are working properly for GET and POST requests.
   app.get('/', function (req, res) {
-    res.send("This is working, now check if /api/item also works here");
+    res.sendFile(path.join(__dirname, '../../client/public', 'index.html'));
   });
 
   app.get("/api/item/:code", async (req, res) => {
