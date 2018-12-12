@@ -12,8 +12,7 @@ mongoose.Promise = global.Promise;
 mongoose.set("debug", true);
 mongoose.connect(constants.mongoURI, {
   keepAlive: true,
-  reconnectTries: Number.MAX_VALUE,
-  useMongoClient: true
+  reconnectTries: Number.MAX_VALUE
 });
 
 require("./models/UrlShorten");
@@ -36,7 +35,7 @@ app.use(function(req, res, next) {
   }
 });
 
-require("./routes/urlshorten")(app);
+require("../routes/urlshorten")(app);
 
 const PORT = 8000;
 app.listen(PORT, () => {
