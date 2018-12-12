@@ -7,7 +7,7 @@
     "start": "node server/index.js",
     "server": "nodemon index.js --ignore tests"
   },
-  "author": "",
+  "author": "Eric Fithian",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
