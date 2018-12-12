@@ -35,9 +35,9 @@ app.use(function(req, res, next) {
   }
 });
 
-require("../routes/urlshorten")(app);
+require("./routes/urlshorten.js")(app);
 
 const PORT = 8000;
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`Server started on port`, PORT);
 });
